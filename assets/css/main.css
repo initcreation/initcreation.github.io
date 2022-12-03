@@ -10,7 +10,7 @@ body{
 
 /* title typography*/
 .section_title{
-    margin-bottom:80px;
+    margin-bottom:60px;
 }
 .section_title h3{
     text-transform: uppercase;
@@ -86,7 +86,7 @@ body{
 .navbar-nav .nav-item .btn{
     background: #ffbc13;
     padding: 8px 13px;
-    color: #ffffff;
+    color: #f4f8fd;
     border: none;
     transition: all .2s ease-in-out;
 }
@@ -118,7 +118,7 @@ body{
 }
 /* Contactus */
 .contactus{
-    padding: 80px 76px;
+    padding: 60px 76px;
     background-image: url("../../assets/images/banner-2.jpg");
     min-height: 500px; 
     background-attachment: fixed;
@@ -188,7 +188,7 @@ body{
 }
 /* How we work */
 .how-we-work{
-    padding: 80px 76px;
+    padding: 60px 76px;
     /* background: #f4f8fd; */
     background: linear-gradient(150deg, #010304, #094165);
 }
@@ -210,11 +210,11 @@ body{
 }
 .how-we-work .section_content p{
     margin-bottom:0;
-    color: #ffffff;
+    color: #f4f8fd;
 }
 .how-we-work .section_content .icon_wrapper{
-    height: 80px;
-    width: 80px;
+    height: 75px;
+    width: 75px;
     background:#ffbc13;
     border-radius: 50px;
     display: flex;
@@ -229,7 +229,7 @@ body{
 
 /* About Us */
 .aboutus{
-    padding: 80px 40px;
+    padding: 60px 40px;
     background: #f4f8fd;
 }
 .aboutus .section_title h3::after{
@@ -264,25 +264,29 @@ body{
     margin-bottom: 40px;
 }
 /* Carousel Section */
-.carousel .carousel-wrapper {
+.carousel .inner-carousel-wrapper {
     position: relative;
+}
+.carousel .inner-carousel-wrapper img{
+    height: calc(100vh - 70px);
 }
 .carousel .carousel-content{
     position: absolute;
     top:50%;
-    transform:translateY(-70%);
+    left: 50%;
+    transform:translate(-50%, -70%);
 }
 
 .carousel .carousel-content h1{
     font-size: 55px;
-    color: #ffffff;
+    color: #f4f8fd;
     font-weight: 700;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
 .carousel .carousel-content p{
     font-size: 18px;
-    color: #ffffff;
+    color: #f4f8fd;
     margin-bottom: 30px;
 }
 .carousel .carousel-content .btn{
@@ -291,7 +295,7 @@ body{
     font-size:15px;
     font-weight: 600;
     padding: 12px 24px;
-    color: #ffffff;
+    color: #f4f8fd;
     border: none;
     border-radius: 3px;
     box-shadow: -4px 15px 17px -7px rgba(0,0,0,0.23);
@@ -302,11 +306,34 @@ body{
 .carousel .carousel-content .btn:hover{
     background: #4b4b4b;
 }
-
+/* Slick slider */
+.carousel .inner-carousel .slick-dots {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    position: absolute;
+    bottom:18%;
+    left: 50%;
+    transform:translateX(-50%);
+}
+.carousel .inner-carousel .slick-dots li{
+    display: inline-block;
+}
+.carousel .inner-carousel .slick-dots li button{
+    margin: 0 5px;
+    background: #4b4b4b;
+    border:none;
+    font-size:0;
+    height: 6px;
+    width: 20px
+}
+.carousel .inner-carousel .slick-dots li.slick-active button{
+    background: #ffbc13;
+}
 /* Blog Section */
 .blog{
     background: #f4f8fd;
-    padding: 80px 40px;
+    padding: 60px 40px;
 }
 .blog .card{
     background: none;
@@ -319,7 +346,6 @@ body{
 }
 .blog .card-body h5{
     margin-bottom:20px;
-    font-size: 18px;
     font-weight: 600;
 }
 .blog .card-body h5 a{
@@ -333,13 +359,12 @@ body{
 .blog .card-body p{
     margin-bottom: 20px;
     color: #777777;
-    font-size:15px;
 }
 
 .blog .card-body .btn{
     background: #ffbc13;
     border-radius: 3px;
-    color: #ffffff;
+    color: #f4f8fd;
     border:none;
     text-transform: uppercase;
     box-shadow: none;
@@ -351,7 +376,12 @@ body{
 .blog .card-body .btn:hover{
     background: #4b4b4b;
 }
-
+.blog .card-wrapper .slick-list {
+    margin: 0 -18px;
+}
+.blog .card-wrapper .slick-slide{
+    margin: 0 18px;
+}
 /* Arrow Up */
 .arrow-up{
     position:fixed;
@@ -374,7 +404,7 @@ body{
 }
 .arrow-up i{
     font-size:18px;
-    color:#ffffff;
+    color:#f4f8fd;
 }
 .arrow-up:hover{
     background: #4b4b4b;
@@ -382,7 +412,7 @@ body{
 
 /* Footer Section */
 footer {
-    padding: 80px 0 50px;
+    padding: 60px 0 50px;
     background: #1a1a1a;
     position: relative;
 }
@@ -399,7 +429,7 @@ footer .footer_list.info::before{
     background: url("../images/map-small.png") no-repeat center center;
 }
 footer .footer_list h4{
-    color:#ffffff;
+    color:#f4f8fd;
     text-transform: uppercase;
     font-weight: 600;
     position: relative;
@@ -487,7 +517,7 @@ footer .footer_list.info li span{
     padding:15px;
 }
 .bottom p {
-    color: #ffffff;
+    color: #f4f8fd;
     font-size: 12px;
     margin-bottom:0;
 }

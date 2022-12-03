@@ -16,4 +16,23 @@ $(document).ready(function() {
     $('.arrow-up').on('click', function(){
         $('html, body').animate({scrollTop: '0px'}, 300);
     })
+
+    // $('.inner-carousel').slick({
+    //     infinite: true,
+    //     speed: 800,
+    //     autoplay: false,
+    //     arrows: false,
+    //     dots: true,
+    // });
+
+    $('.card-wrapper').slick({
+        infinite: false,
+        speed: 1000,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: true,
+    });
+    AOS.init();
 });
+
