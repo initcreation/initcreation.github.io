@@ -32,6 +32,28 @@ body{
 /* .navbar .navbar-brand img{
     max-width: 60px;
 } */
+.navbar.fixed .navbar-brand img{
+    height: 40px;
+}
+.navbar .navbar-brand img{
+    height: 55px;
+    transition: all .2s ease-in-out;
+}
+.navbar.fixed {
+    top:0;
+    position:fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    padding-bottom: 5px;
+    box-shadow: -5px 13px 17px -2px rgba(0,0,0,0.08);
+    -webkit-box-shadow: -5px 13px 17px -2px rgba(0,0,0,0.08);
+    -moz-box-shadow: -5px 13px 17px -2px rgba(0,0,0,0.08);
+}
+.navbar{
+    background: #ffffff;
+    transition: all .2s ease-in-out;
+}
 .navbar-nav .nav-item .nav-link {
     color:#202020;
     font-weight: 500;
@@ -50,7 +72,7 @@ body{
     left: 0;
     background: #ffbc13;
     transform-origin: bottom right;
-    transition: transform 0.3s ease-out;
+    transition: transform 0.2s ease-out;
 }
 .navbar-nav .nav-item .nav-link:hover::after{
     transform: scaleX(1);
@@ -60,13 +82,13 @@ body{
 .navbar-nav .nav-item{
     align-items: center;
     display: flex;
-}
+}  
 .navbar-nav .nav-item .btn{
     background: #ffbc13;
     padding: 8px 13px;
     color: #ffffff;
     border: none;
-    transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .navbar .nav-right .nav-right-item{
@@ -81,17 +103,18 @@ body{
     border:none
 }
 .navbar .nav-right .nav-right-item .nav-link{
-    padding:1.3rem
+    padding: 2px 0 2px 5px;
+    margin-left: 15px;
 }
 .navbar .nav-right .nav-right-item .nav-link::before{
     content:"";
     background:#202020;
     position:absolute;
-    height:33%;
+    height:70%;
     width:2px;
     left:0;
-    top:0;
-    transform:translateY(100%)
+    top:50%;
+    transform:translateY(-50%)
 }
 /* Contactus */
 .contactus{
@@ -143,10 +166,11 @@ body{
     color: #f4f8fd;
 }
 .how-we-work .section_wrap{
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 .how-we-work .section_content{
-    padding-left:100px;
+    padding-left:120px;
+    padding-right: 30px;
     position: relative;
 }
 .how-we-work .section_content h5{
@@ -238,33 +262,56 @@ body{
     box-shadow: -4px 15px 17px -7px rgba(0,0,0,0.23);
     -webkit-box-shadow: -4px 15px 17px -7px rgba(0,0,0,0.23);
     -moz-box-shadow: -4px 15px 17px -7px rgba(0,0,0,0.23);
-    transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 .carousel .carousel-content .btn:hover{
     transform: translateY(-2px);
 }
 
 /* Blog Section */
-.blog-section{
-    padding:36px 0;
+.blog{
     background: #f4f8fd;
+    padding: 80px 40px;
 }
-.blog-section .blog-card{
+.blog .card{
+    background: none;
+    border: none;
+}
+
+.blog .card-body{
+    margin: 30px 0;
+    padding:0;
+}
+.blog .card-body h5{
+    margin-bottom:20px;
+    font-size: 18px;
+}
+.blog .card-body h5 a{
+    text-decoration: none;
+    color: #4b4b4b;
+    transition: all .2s ease-in-out;
+}
+.blog .card-body h5 a:hover{
+    color: #ffbc13;
+}
+.blog .card-body p{
+    margin-bottom: 20px;
+    color: #777777;
+    font-size:15px;
+}
+
+.blog .card-body .btn{
+    background: #ffbc13;
+    border-radius: 3px;
+    color: #ffffff;
     border:none;
-    border-radius:3px
+    text-transform: uppercase;
+    box-shadow: none;
+    font-size: 15px;
+    transition: all .2s ease-in-out;
 }
-.blog-section .blog-card .figure{
-    margin:6px 3px 1rem
-}
-.blog-section .blog-card img{
-    max-width:100%
-}
-.blog-section .blog-card a{
-    text-decoration:none;
-    color:#000
-}
-.blog-section .blog-card .card{
-    border-radius:9px
+.blog .card-body .btn:hover{
+    background: #4b4b4b;
 }
 
 /* Arrow Up */
@@ -335,7 +382,7 @@ footer .footer_list li{
 footer .footer_list li a{
     text-decoration: none;
     color: #979797;
-    transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 footer .footer_list.links li a:hover{

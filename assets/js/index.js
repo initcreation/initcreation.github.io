@@ -1,18 +1,11 @@
-
-///////////////////////////////////////////////
-// Code to show project popup on button click
-///////////////////////////////////////////////
-
-projectPopup = document.getElementById('project-popup');
-projectViewBtn = document.querySelectorAll('.view-btn');
-
-for (i=0; i<projectViewBtn.length; i++) {
-    projectViewBtn[i].addEventListener('click', function() {
-        projectPopup.classList.remove('d-none');
+$(document).ready(function() {
+    $(document).scroll(function () {
+        var scroll = $(this).scrollTop();
+        var topDist = $(".navbar").position();
+        if (scroll > topDist.top) {
+            $('nav').addClass('fixed');
+        } else {
+            $('nav').removeClass('fixed');
+        }
     });
-}
-
-projectPopupCloseBtn = document.getElementById('close-btn');
-projectPopupCloseBtn.addEventListener('click', function() {
-    projectPopup.classList.add('d-none');
 });
