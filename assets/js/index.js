@@ -7,5 +7,13 @@ $(document).ready(function() {
         } else {
             $('nav').removeClass('fixed');
         }
+        if (scroll > 400) {
+            $('.arrow-up').addClass('show');
+        } else {
+            $('.arrow-up').removeClass('show');
+        }
     });
+    $('.arrow-up').on('click', function(){
+        $('html, body').animate({scrollTop: '0px'}, 300);
+    })
 });

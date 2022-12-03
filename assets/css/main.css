@@ -114,7 +114,7 @@ body{
     width:2px;
     left:0;
     top:50%;
-    transform:translateY(-50%)
+    transform:translateY(-50%);
 }
 /* Contactus */
 .contactus{
@@ -127,11 +127,11 @@ body{
     background-size: cover;
 }
 .contactus .section_title h3{
-    color: #ffffff;
+    color: #f4f8fd;
     margin-bottom:40px;
 }
 .contactus .section_title p{
-    color: #ffffff;
+    color: #f4f8fd;
 }
 
 .contactus .section_title {
@@ -141,8 +141,8 @@ body{
     border-radius: 0;
     padding: 10px;
     box-shadow: none;
-    background: #333333;
-    color: #c3c3c3;;
+    background: #4b4b4b;
+    color: #f4f8fd;;
     border: none;
 }
 
@@ -151,10 +151,40 @@ body{
     background: #ffbc13;
     box-shadow: none;
     border:none;
-    color:#202020;
+    border-radius: 3px;
+    color:#f4f8fd;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
 }
-.contactus form .btn:hover{
-    background: #d98c05;
+.contactus form .btn::before{
+    content: '\f058';
+    position: absolute;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 700;
+    font-size: 30px;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: -100%;
+    transition: all 0.5s;
+    color:#f4f8fd;
+}
+.contactus form .btn:hover::before{
+    top: 5px;
+}
+.contactus form .btn span{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: all 0.5s;
+}
+.contactus form .btn:hover span{
+    transform: translateY(200%);
 }
 /* How we work */
 .how-we-work{
@@ -242,30 +272,35 @@ body{
     top:50%;
     transform:translateY(-70%);
 }
-.carousel img{
-    height: 90vh;
-}
+
 .carousel .carousel-content h1{
     font-size: 55px;
     color: #ffffff;
     font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 .carousel .carousel-content p{
     font-size: 18px;
     color: #ffffff;
+    margin-bottom: 30px;
 }
 .carousel .carousel-content .btn{
     background: #ffbc13;
+    text-transform: uppercase;
+    font-size:15px;
+    font-weight: 600;
     padding: 12px 24px;
     color: #ffffff;
     border: none;
+    border-radius: 3px;
     box-shadow: -4px 15px 17px -7px rgba(0,0,0,0.23);
     -webkit-box-shadow: -4px 15px 17px -7px rgba(0,0,0,0.23);
     -moz-box-shadow: -4px 15px 17px -7px rgba(0,0,0,0.23);
     transition: all .2s ease-in-out;
 }
 .carousel .carousel-content .btn:hover{
-    transform: translateY(-2px);
+    background: #4b4b4b;
 }
 
 /* Blog Section */
@@ -285,6 +320,7 @@ body{
 .blog .card-body h5{
     margin-bottom:20px;
     font-size: 18px;
+    font-weight: 600;
 }
 .blog .card-body h5 a{
     text-decoration: none;
@@ -309,6 +345,8 @@ body{
     box-shadow: none;
     font-size: 15px;
     transition: all .2s ease-in-out;
+    font-weight: 600;
+    padding: 8px 18px;
 }
 .blog .card-body .btn:hover{
     background: #4b4b4b;
@@ -317,7 +355,7 @@ body{
 /* Arrow Up */
 .arrow-up{
     position:fixed;
-    bottom:30px;
+    bottom:-50px;
     right:20px;
     width:40px;
     height:40px;
@@ -325,6 +363,14 @@ body{
     background:#005aa9;
     transition:all .2s ease-in-out;
     cursor:pointer;
+    visibility: hidden;
+    opacity:0;
+    z-index: 9999;
+}
+.arrow-up.show{
+    bottom: 40px;
+    opacity: 1;
+    visibility: visible;
 }
 .arrow-up i{
     font-size:18px;
