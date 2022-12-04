@@ -271,9 +271,9 @@ body{
 .carousel .inner-carousel-wrapper {
     position: relative;
 }
-/* .carousel .inner-carousel-wrapper img{
-    height: calc(100vh - 70px);
-} */
+.carousel .inner-carousel-wrapper img{
+    width: 100%;
+}
 .carousel .carousel-content{
     position: absolute;
     top:50%;
