@@ -530,6 +530,32 @@ footer .footer_list.info li span{
 
 
 /* Media Query */
+
+@media (max-width: 575px){
+    .carousel .inner-carousel img{
+        height: 100vh;
+        background-size: cover;
+    }
+    .carousel .carousel-content h1{
+        font-size: 30px;
+    }
+    .carousel .carousel-content p{
+        font-size:14px;
+    }
+
+    .carousel .carousel-content{
+        transform: translate(-50%, -50%);
+    }
+    .aboutus .service_container:last-child{
+        margin-bottom:0;
+    }   
+    .aboutus, .how-we-work, .blog, .contactus, footer{
+        padding: 50px 0;
+    }
+    footer .footer_list.links ul{
+        margin-bottom: 40px;
+    }
+}
 @media (min-width: 576px) and (max-width: 767px) {
 
     .carousel .inner-carousel img{
@@ -612,5 +638,14 @@ footer .footer_list.info li span{
     }
     .carousel .carousel-content{
         transform: translate(-50%, -50%);
+    }
+    .carousel .carousel-content h1{
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px){
+    .carousel .carousel-content h1{
+        font-size: 55px;
     }
 }
