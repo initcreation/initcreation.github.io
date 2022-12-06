@@ -234,7 +234,8 @@ body{
 /* About Us */
 .aboutus{
     padding: 80px 0;
-    background: #f4f8fd;
+    /* background: #f4f8fd; */
+    
 }
 .aboutus .section_title h3::after{
     background: #005aa9;
@@ -337,14 +338,36 @@ body{
 .carousel .inner-carousel .slick-dots li.slick-active button{
     background: #ffbc13;
 }
+/* Who */
+.who-we-are{
+    padding: 80px 0;
+    background-image: url(../images/whoweare.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color:  #094165;
+}
+.who-we-are .section_title{
+    color: #f4f8fd;
+}
+.who-we-are p{
+    color: #f4f8fd;
+    padding: 0 60px;
+    font-weight: 600;
+}
 /* Blog Section */
 .blog{
-    background: #f4f8fd;
     padding: 80px 0;
 }
 .blog .card{
     background: none;
     border: none;
+    padding: 14px;
+    box-shadow: -3px 0px 20px -4px rgba(0,0,0,0.06);
+    -webkit-box-shadow: -3px 0px 20px -4px rgba(0,0,0,0.06);
+    -moz-box-shadow: -3px 0px 20px -4px rgba(0,0,0,0.06);
+}
+.blog .slick-slider .slick-track{
+    padding: 20px 0;
 }
 .blog .card img{
     max-width: 100%;
@@ -551,7 +574,7 @@ footer .footer_list.info li span{
     .aboutus .service_container:last-child{
         margin-bottom:0;
     }   
-    .aboutus, .how-we-work, .blog, .contactus, footer{
+    .aboutus, .how-we-work, .blog, .contactus, .who-we-are, footer{
         padding: 50px 0;
     }
     footer .footer_list.links ul{
@@ -577,7 +600,7 @@ footer .footer_list.info li span{
     .aboutus .service_container:last-child{
         margin-bottom:0;
     }   
-    .aboutus, .how-we-work, .blog, .contactus, footer{
+    .aboutus, .how-we-work, .blog, .contactus,.who-we-are, footer{
         padding: 50px 0;
     }
     footer .footer_list.links ul{
@@ -630,6 +653,9 @@ footer .footer_list.info li span{
     }
     .aboutus, .how-we-work{
         padding: 80px 0 40px;
+    }
+    .who-we-are p{
+        padding:0;
     }
 }
 
