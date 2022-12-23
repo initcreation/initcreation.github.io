@@ -502,7 +502,7 @@ footer .footer_list.links li a i{
     padding-right: 16px;
     color: #979797 !important;
 }
-footer .footer_list.info li:last-child{
+/* footer .footer_list.info li:last-child{
     margin-top: 30px;
 }
 footer .footer_list.info li:last-child a{
@@ -541,7 +541,7 @@ footer .footer_list.info li span{
     font-weight: 600;
     width:75px;
     display: inline-block;
-}
+} */
 
 .bottom{
     background: #101010;
