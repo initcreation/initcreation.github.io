@@ -537,11 +537,12 @@ footer .footer_list.info li:last-child a:hover::before{
     background: #ffbc13;
     border-color: #ffbc13;
 }
+*/
 footer .footer_list.info li span{
     font-weight: 600;
     width:75px;
     display: inline-block;
-} */
+}
 
 .bottom{
     background: #101010;
