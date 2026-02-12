@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://initcreation.com.np/sitemap.xml

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success | InitCreation</title>
+    <style>
+        :root {
+            --terminal-bg: #0a0e14;
+            --terminal-fg: #b3b1ad;
+            --terminal-green: #238636;
+            --terminal-cyan: #39bae6;
+            --terminal-border: #1f2937;
+        }
+
+        body {
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace;
+            background-color: var(--terminal-bg);
+            color: var(--terminal-fg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card {
+            border: 2px solid var(--terminal-border);
+            padding: 40px;
+            max-width: 500px;
+            background: #0f1419;
+            position: relative;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0px, rgba(0, 0, 0, 0.1) 1px, transparent 1px, transparent 2px);
+            pointer-events: none;
+        }
+
+        h1 {
+            color: var(--terminal-green);
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border: 2px solid var(--terminal-green);
+            color: var(--terminal-green);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: var(--terminal-green);
+            color: var(--terminal-bg);
+        }
+
+        .prompt::before {
+            content: "root@init:~$ ";
+            color: var(--terminal-cyan);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>[ SUCCESS ]</h1>
+        <p class="prompt">Message transmitted successfully. Our team will review your request and initialize contact
+            within 24 hours.</p>
+        <a href="index.html" class="btn">Return to Terminal</a>
+    </div>
+</body>
+
+</html>
