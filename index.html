@@ -438,6 +438,7 @@
                         <label for="f-website">Leave this empty</label>
                         <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
                     </div>
+                    <div id="turnstile" class="turnstile"></div>
                     <button type="submit" class="btn">Send message</button>
                     <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
                     <p class="form-note">See our <a href="privacy.html">privacy policy</a>. Exposure reports use
@@ -512,6 +513,29 @@
             });
         })();
 
+        // Cloudflare Turnstile. The site key is injected at deploy time (keep this placeholder exactly once).
+        var TURNSTILE_SITE_KEY = '0x4AAAAAAFNPR9uZm5PpAmnV';
+        var turnstileConfigured = TURNSTILE_SITE_KEY !== '' && TURNSTILE_SITE_KEY.indexOf('{{') !== 0;
+        var turnstileWidgetId = null;
+        window.onTurnstileLoad = function () {
+            turnstileWidgetId = window.turnstile.render('#turnstile', {
+                sitekey: TURNSTILE_SITE_KEY,
+                action: 'contact',
+                theme: 'light',
+                size: 'flexible'
+            });
+        };
+        if (turnstileConfigured) {
+            var ts = document.createElement('script');
+            ts.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad';
+            ts.async = true;
+            ts.defer = true;
+            document.head.appendChild(ts);
+        }
+        function resetTurnstile() {
+            if (turnstileWidgetId !== null && window.turnstile) window.turnstile.reset(turnstileWidgetId);
+        }
+
         document.getElementById('contactForm').addEventListener('submit', async function (e) {
             e.preventDefault();
             var form = e.target;
@@ -578,6 +602,27 @@
                 return;
             }
 
+            if (turnstileConfigured) {
+                var token = window.turnstile && turnstileWidgetId !== null ? window.turnstile.getResponse(turnstileWidgetId) : '';
+                if (!window.turnstile) {
+                    status.style.color = '#b91c1c';
+                    status.textContent = '';
+                    status.appendChild(document.createTextNode('The security check could not load (an ad or script blocker may be stopping it). Please '));
+                    var link = document.createElement('a');
+                    link.href = mailtoHref();
+                    link.textContent = 'send these details by email';
+                    status.appendChild(link);
+                    status.appendChild(document.createTextNode(' to ' + CONTACT_EMAIL + '.'));
+                    return;
+                }
+                if (!token) {
+                    status.style.color = '#9a3412';
+                    status.textContent = 'Please complete the security check above the button.';
+                    return;
+                }
+                payload.turnstileToken = token;
+            }
+
             btn.disabled = true;
             btn.textContent = 'Sending…';
             status.style.color = 'var(--muted)';
@@ -591,12 +636,15 @@
                 });
                 if (response.ok) {
                     window.location.href = 'thanks.html';
-                } else {
-                    throw new Error('Request failed');
+                    return;
                 }
+                throw new Error(response.status === 403 ? 'turnstile' : 'Request failed');
             } catch (error) {
                 status.style.color = '#b91c1c';
-                status.textContent = 'Something went wrong. Please try again or email ' + CONTACT_EMAIL + '.';
+                status.textContent = error.message === 'turnstile'
+                    ? 'The security check failed or expired. Please complete it again and resend.'
+                    : 'Something went wrong. Please try again or email ' + CONTACT_EMAIL + '.';
+                resetTurnstile();
                 btn.disabled = false;
                 btn.textContent = originalBtnText;
             }

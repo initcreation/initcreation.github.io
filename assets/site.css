@@ -223,3 +223,6 @@ p { max-width: 68ch; }
     .hero { padding: 64px 0 48px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Cloudflare Turnstile widget (empty unless a site key is configured) */
+.turnstile:not(:empty) { margin-bottom: 18px; }
