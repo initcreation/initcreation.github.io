@@ -2,20 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://initcreation.com.np/</loc>
-        <lastmod>2026-01-31</lastmod>
+        <lastmod>2026-10-03</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://initcreation.com.np/ai-solutions.html</loc>
+        <lastmod>2026-10-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://initcreation.com.np/cybersecurity.html</loc>
+        <lastmod>2026-10-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://initcreation.com.np/web-development.html</loc>
+        <lastmod>2026-10-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
         <loc>https://initcreation.com.np/privacy.html</loc>
         <lastmod>2026-01-31</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
     </url>
     <url>
         <loc>https://initcreation.com.np/terms.html</loc>
         <lastmod>2026-01-31</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
     </url>
 </urlset>
