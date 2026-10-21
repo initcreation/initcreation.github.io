@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cybersecurity Services: Security Reviews and Monitoring | InitCreation</title>
-    <meta name="description" content="Web application and API security reviews, attack surface monitoring, cloud hardening and OSINT due diligence for businesses in Nepal and abroad.">
+    <title>Website and Email Security Basics for Small Businesses | InitCreation</title>
+    <meta name="description" content="Practical security basics for small businesses and startups: a free public exposure snapshot, website security checks, SPF/DKIM/DMARC setup, website hardening and exposure monitoring.">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#ffffff">
     <link rel="canonical" href="https://initcreation.com.np/cybersecurity">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://initcreation.com.np/cybersecurity">
-    <meta property="og:title" content="Cybersecurity Services: Security Reviews and Monitoring | InitCreation">
-    <meta property="og:description" content="Web application and API security reviews, attack surface monitoring, cloud hardening and OSINT due diligence for businesses in Nepal and abroad.">
+    <meta property="og:title" content="Website and Email Security Basics for Small Businesses | InitCreation">
+    <meta property="og:description" content="Practical security basics for small businesses and startups: a free public exposure snapshot, website security checks, SPF/DKIM/DMARC setup, website hardening and exposure monitoring.">
     <meta property="og:image" content="https://initcreation.com.np/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -28,8 +28,9 @@
   "@graph": [
     {
       "@type": "Service",
-      "name": "Cybersecurity",
-      "description": "Web application and API security reviews, attack surface monitoring, cloud hardening and OSINT due diligence for businesses in Nepal and abroad.",
+      "name": "Website and email security basics",
+      "serviceType": "Website and email security basics",
+      "description": "Practical security basics for small businesses and startups: a free public exposure snapshot, website security checks, SPF/DKIM/DMARC setup, website hardening and exposure monitoring.",
       "url": "https://initcreation.com.np/cybersecurity",
       "provider": {
         "@type": "Organization",
@@ -39,7 +40,57 @@
       "areaServed": [
         "NP",
         "Worldwide"
-      ]
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Security basics",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Free public exposure snapshot"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Website security check"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Email and domain security setup"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Website hardening"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Security basics for small teams"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Exposure monitoring"
+            }
+          }
+        ]
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -63,34 +114,42 @@
       "mainEntity": [
         {
           "@type": "Question",
+          "name": "Is this a penetration test?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The website security check is a basic security check, not a penetration test. We look at configuration and at what is publicly visible, using established free tools and a manual review. We do not try to break into your systems."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Do you ever test without permission?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Active testing only takes place under a signed scope and authorisation. The free exposure report uses public information only."
+            "text": "Never. A website security check only starts after you give written permission for a defined scope. The free public exposure snapshot uses public data only; nothing is scanned or tested."
           }
         },
         {
           "@type": "Question",
-          "name": "Which standards do you follow?",
+          "name": "What tools do you use?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "OWASP WSTG, ASVS and the API Security Top 10 for testing, and CIS benchmarks and ISO 27001 controls for hardening."
+            "text": "Established free tools such as Mozilla Observatory and Qualys SSL Labs, standard DNS and email record checks, certificate transparency logs and ReconDB data, followed by a manual review. We follow published guidance such as the OWASP and CIS recommendations."
           }
         },
         {
           "@type": "Question",
-          "name": "Can you help with regulatory requirements?",
+          "name": "What if we need a penetration test or a compliance audit?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. We can review your systems against requirements such as Nepal Rastra Bank IT guidelines, ISO 27001 and customer security questionnaires, and support remediation. Where a formal penetration test is required, we can arrange one through experienced partners."
+            "text": "For penetration tests, compliance audits or incident response, we recommend a specialist security firm. We're happy to help you prepare, for example by getting the basics in place first."
           }
         },
         {
           "@type": "Question",
-          "name": "How long does a security review take?",
+          "name": "How long does it take?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A typical web application review takes one to two weeks, depending on its size."
+            "text": "The free snapshot usually takes two to three days. A website security check usually takes one to two weeks, including the re-check after your fixes. Setup work depends on how many domains, websites and accounts are involved, and we confirm the timeline in writing before we start."
           }
         }
       ]
@@ -119,10 +178,12 @@
         <section class="page-head">
             <div class="container">
                 <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> / Cybersecurity</nav>
-                <h1>Find and fix security weaknesses before someone else does.</h1>
-                <p class="intro">We review your web applications, APIs and internet-facing systems for security weaknesses, explain the results in plain language, and help your team fix what matters most. Start with a free report on your public exposure.</p>
+                <h1>Practical security basics for small businesses and startups.</h1>
+                <p class="intro">We handle the security essentials many small teams skip: email and domain protection, a
+                    properly configured website, two-factor logins and a clear view of what is publicly visible. Everything
+                    is explained without jargon. Start with a free snapshot of your public exposure.</p>
                 <div class="actions">
-                    <a href="/?service=security-snapshot#contact" class="btn">Request a free exposure report</a>
+                    <a href="/?service=security-snapshot#contact" class="btn">Request a free exposure snapshot</a>
                     <a href="#services" class="btn btn-outline">View services</a>
                 </div>
             </div>
@@ -132,20 +193,23 @@
             <div class="container">
                 <div class="section-head">
                     <span class="label">The problem</span>
-                    <h2>Common reasons clients contact us</h2>
+                    <h2>Common gaps we help close</h2>
                 </div>
                 <div class="cols-3">
                     <div>
-                        <h3>Unknown exposure</h3>
-                        <p class="muted">Forgotten subdomains, test servers and admin pages are some of the most common ways into an organisation.</p>
+                        <h3>You don't know what's publicly visible</h3>
+                        <p class="muted">Forgotten subdomains, old test sites and admin login pages are easy for anyone to
+                            find, and easy for you to overlook.</p>
                     </div>
                     <div>
-                        <h3>Client and regulatory requests</h3>
-                        <p class="muted">Banks, regulators, partners and larger customers increasingly ask for independent security testing.</p>
+                        <h3>Your domain can be spoofed</h3>
+                        <p class="muted">Without SPF, DKIM and DMARC, anyone can send phishing emails that appear to come
+                            from your domain.</p>
                     </div>
                     <div>
-                        <h3>No dedicated security staff</h3>
-                        <p class="muted">Developers are focused on delivery, and nobody is responsible for looking for weaknesses.</p>
+                        <h3>Nobody owns security day to day</h3>
+                        <p class="muted">Small teams are focused on delivery, so two-factor logins, updates, backups and
+                            offboarding tend to slip.</p>
                     </div>
                 </div>
             </div>
@@ -156,45 +220,90 @@
                 <div class="section-head">
                     <span class="label">Services</span>
                     <h2>What we offer</h2>
+                    <p>Basic, well-defined work using established free tools and careful setup. Each one is scoped in
+                        writing before we start.</p>
                 </div>
                 <div class="cols-2">
-                    <article>
-                        <h3>Security reviews</h3>
-                        <p class="muted" style="margin-bottom: 14px;">Structured testing of web applications and APIs, following the OWASP testing guides. Full penetration tests are available through experienced partners.</p>
+                    <article id="snapshot">
+                        <h3>Free public exposure snapshot</h3>
+                        <p class="muted" style="margin-bottom: 14px;">What anyone can see about your domain from public
+                            data. Passive only: nothing is scanned or tested.</p>
                         <ul class="list">
-                            <li>Authentication, authorisation and business logic</li>
-                            <li>Evidence and fix guidance for each finding</li>
-                            <li>Retest after remediation</li>
+                            <li>Subdomains and certificates</li>
+                            <li>Visible technologies</li>
+                            <li>Email authentication records</li>
+                            <li>A short walkthrough of the results</li>
                         </ul>
+                        <a href="/?service=security-snapshot#contact" class="text-link">Request a free snapshot →</a>
                     </article>
-                    <article>
-                        <h3>Attack surface monitoring</h3>
-                        <p class="muted" style="margin-bottom: 14px;">Ongoing discovery and monitoring of your internet-facing assets, using ReconDB data.</p>
+                    <article id="website-check">
+                        <h3>Website security check</h3>
+                        <p class="muted" style="margin-bottom: 14px;">A check of one website, with your written permission,
+                            using established free tools such as Mozilla Observatory and Qualys SSL Labs plus a manual
+                            review. This is a basic security check, not a penetration test.</p>
                         <ul class="list">
-                            <li>Subdomains, open services and technologies</li>
-                            <li>Alerts for new exposure and expiring certificates</li>
-                            <li>Monthly summary for management</li>
+                            <li>HTTPS/TLS configuration and certificate</li>
+                            <li>Security headers and cookie flags</li>
+                            <li>Email authentication (SPF, DKIM, DMARC)</li>
+                            <li>Publicly visible software versions</li>
+                            <li>Commonly exposed files (such as .git, backups, .env) and admin login pages</li>
+                            <li>Plain-language report with prioritised fixes, and a re-check after fixes</li>
                         </ul>
+                        <a href="/?service=cybersecurity#contact" class="text-link">Get a quote →</a>
                     </article>
-                    <article>
-                        <h3>Cloud and CI/CD hardening</h3>
-                        <p class="muted" style="margin-bottom: 14px;">Configuration review of AWS, Google Cloud or Azure, and security checks in your build pipeline.</p>
+                    <article id="email-domain">
+                        <h3>Email and domain security setup</h3>
+                        <p class="muted" style="margin-bottom: 14px;">Make your domain harder to spoof and your domain
+                            accounts harder to take over.</p>
                         <ul class="list">
-                            <li>Review against CIS benchmarks</li>
-                            <li>Secret, dependency and container scanning</li>
-                            <li>Secure deployment templates</li>
+                            <li>SPF, DKIM and DMARC configured and monitored</li>
+                            <li>Registrar lock and two-factor authentication on the account</li>
+                            <li>DNSSEC where your registrar supports it</li>
+                            <li>Cloudflare DNS basics</li>
                         </ul>
+                        <a href="/?service=cybersecurity#contact" class="text-link">Get a quote →</a>
                     </article>
-                    <article>
-                        <h3>OSINT and due diligence</h3>
-                        <p class="muted" style="margin-bottom: 14px;">Independent review of a company&#x27;s public footprint and security posture before an investment or partnership.</p>
+                    <article id="hardening">
+                        <h3>Website hardening</h3>
+                        <p class="muted" style="margin-bottom: 14px;">Sensible protection and a maintenance routine for an
+                            existing website.</p>
                         <ul class="list">
-                            <li>Breach and data leak history</li>
-                            <li>Technology and infrastructure review</li>
-                            <li>Concise risk report for decision makers</li>
+                            <li>HTTPS everywhere and security headers</li>
+                            <li>Cloudflare and WAF setup</li>
+                            <li>Backups with tested restores</li>
+                            <li>An update routine and uptime monitoring</li>
                         </ul>
+                        <a href="/?service=cybersecurity#contact" class="text-link">Get a quote →</a>
+                    </article>
+                    <article id="small-teams">
+                        <h3>Security basics for small teams</h3>
+                        <p class="muted" style="margin-bottom: 14px;">The everyday habits and settings that prevent the most
+                            common account and email problems.</p>
+                        <ul class="list">
+                            <li>Two-factor authentication rollout</li>
+                            <li>Password manager setup</li>
+                            <li>Recommended Google Workspace or Microsoft 365 security settings</li>
+                            <li>Joiner and leaver (offboarding) checklist</li>
+                            <li>A short staff awareness session on phishing</li>
+                        </ul>
+                        <a href="/?service=cybersecurity#contact" class="text-link">Get a quote →</a>
+                    </article>
+                    <article id="monitoring">
+                        <h3>Exposure monitoring</h3>
+                        <p class="muted" style="margin-bottom: 14px;">Monthly monitoring of your internet-facing assets,
+                            powered by ReconDB data.</p>
+                        <ul class="list">
+                            <li>New subdomains and exposed services</li>
+                            <li>Expiring certificates</li>
+                            <li>Alerts when something changes</li>
+                            <li>A short monthly summary</li>
+                        </ul>
+                        <a href="/?service=cybersecurity#contact" class="text-link">Get a quote →</a>
                     </article>
                 </div>
+                <p class="muted" style="margin-top: 40px;"><strong>Not offered:</strong> For penetration tests, compliance
+                    audits (for example ISO 27001 or regulatory requirements) or incident response, we recommend a
+                    specialist security firm. We're happy to help you prepare.</p>
             </div>
         </section>
 
@@ -202,33 +311,34 @@
             <div class="container split">
                 <div>
                     <span class="label">Deliverables</span>
-                    <h2>What you receive</h2>
-                    <p class="muted">Every engagement is scoped in writing and ends with something your team can
-                        use.</p>
+                    <h2>How the work is delivered</h2>
+                    <p class="muted">Every engagement is agreed in writing and ends with something your team can use.</p>
                 </div>
                 <ol class="points">
                     <li>
                         <div>
-                            <h3>Written scope</h3>
-                            <p>Targets, testing windows and rules of engagement agreed and signed before any testing.</p>
+                            <h3>Written permission and scope first</h3>
+                            <p>You confirm in writing which domain, website or accounts are included before we check or
+                                change anything.</p>
                         </div>
                     </li>
                     <li>
                         <div>
-                            <h3>Executive summary</h3>
-                            <p>The overall risk and the most important actions, in plain language.</p>
+                            <h3>A plain-language report or a completed setup checklist</h3>
+                            <p>Checks end in a short report with prioritised fixes. Setup work ends with a checklist of
+                                what was configured and where.</p>
                         </div>
                     </li>
                     <li>
                         <div>
-                            <h3>Technical findings</h3>
-                            <p>Each issue with severity, evidence, and specific steps to fix it.</p>
+                            <h3>Step-by-step fixes, or we implement them</h3>
+                            <p>Your team can follow our instructions, or we make the changes for you.</p>
                         </div>
                     </li>
                     <li>
                         <div>
-                            <h3>Debrief and retest</h3>
-                            <p>A call with your team to walk through the results, and a retest of fixed issues.</p>
+                            <h3>A re-check</h3>
+                            <p>Once the fixes are in place, we check again and confirm what has been resolved.</p>
                         </div>
                     </li>
                 </ol>
@@ -243,20 +353,24 @@
                 </div>
                 <div class="faq">
                     <details>
+                        <summary>Is this a penetration test?</summary>
+                        <p>No. The website security check is a basic security check, not a penetration test. We look at configuration and at what is publicly visible, using established free tools and a manual review. We do not try to break into your systems.</p>
+                    </details>
+                    <details>
                         <summary>Do you ever test without permission?</summary>
-                        <p>No. Active testing only takes place under a signed scope and authorisation. The free exposure report uses public information only.</p>
+                        <p>Never. A website security check only starts after you give written permission for a defined scope. The free public exposure snapshot uses public data only; nothing is scanned or tested.</p>
                     </details>
                     <details>
-                        <summary>Which standards do you follow?</summary>
-                        <p>OWASP WSTG, ASVS and the API Security Top 10 for testing, and CIS benchmarks and ISO 27001 controls for hardening.</p>
+                        <summary>What tools do you use?</summary>
+                        <p>Established free tools such as Mozilla Observatory and Qualys SSL Labs, standard DNS and email record checks, certificate transparency logs and ReconDB data, followed by a manual review. We follow published guidance such as the OWASP and CIS recommendations.</p>
                     </details>
                     <details>
-                        <summary>Can you help with regulatory requirements?</summary>
-                        <p>Yes. We can review your systems against requirements such as Nepal Rastra Bank IT guidelines, ISO 27001 and customer security questionnaires, and support remediation. Where a formal penetration test is required, we can arrange one through experienced partners.</p>
+                        <summary>What if we need a penetration test or a compliance audit?</summary>
+                        <p>For penetration tests, compliance audits or incident response, we recommend a specialist security firm. We're happy to help you prepare, for example by getting the basics in place first.</p>
                     </details>
                     <details>
-                        <summary>How long does a security review take?</summary>
-                        <p>A typical web application review takes one to two weeks, depending on its size.</p>
+                        <summary>How long does it take?</summary>
+                        <p>The free snapshot usually takes two to three days. A website security check usually takes one to two weeks, including the re-check after your fixes. Setup work depends on how many domains, websites and accounts are involved, and we confirm the timeline in writing before we start.</p>
                     </details>
                 </div>
             </div>
@@ -265,10 +379,10 @@
         <section class="section">
             <div class="container closing">
                 <div>
-                    <h2>See what is publicly visible about your organisation</h2>
-                    <p>The free exposure report is based on public data only and includes a 20-minute walkthrough.</p>
+                    <h2>See what is publicly visible about your domain</h2>
+                    <p>The free public exposure snapshot uses public data only and includes a short walkthrough.</p>
                 </div>
-                <a href="/?service=security-snapshot#contact" class="btn">Request a free exposure report</a>
+                <a href="/?service=security-snapshot#contact" class="btn">Request a free exposure snapshot</a>
             </div>
         </section>
     </main>
