@@ -1,0 +1,2 @@
+# GitHub Pages (Jekyll) skips dot-folders by default; publish security.txt.
+include: [".well-known"]
