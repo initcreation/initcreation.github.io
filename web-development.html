@@ -39,7 +39,62 @@
       "areaServed": [
         "NP",
         "Worldwide"
-      ]
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Web development",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 600,
+              "priceCurrency": "USD"
+            },
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Company website"
+            }
+          },
+          {
+            "@type": "Offer",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 1200,
+              "priceCurrency": "USD"
+            },
+            "itemOffered": {
+              "@type": "Service",
+              "name": "E-commerce store"
+            }
+          },
+          {
+            "@type": "Offer",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 3000,
+              "priceCurrency": "USD"
+            },
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Custom web application"
+            }
+          },
+          {
+            "@type": "Offer",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "minPrice": 80,
+              "priceCurrency": "USD",
+              "unitText": "MONTH"
+            },
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Maintenance plan"
+            }
+          }
+        ]
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -166,6 +221,7 @@
                             <li>Search optimisation and analytics</li>
                             <li>Simple content editing for your team</li>
                         </ul>
+                        <p class="from-price">From USD 600</p>
                     </article>
                     <article>
                         <h3>E-commerce</h3>
@@ -175,6 +231,7 @@
                             <li>Product, order and customer management</li>
                             <li>Secure checkout and hosting</li>
                         </ul>
+                        <p class="from-price">From USD 1,200</p>
                     </article>
                     <article>
                         <h3>Custom web applications</h3>
@@ -184,6 +241,7 @@
                             <li>Role-based access and audit logs</li>
                             <li>Integration with your existing systems</li>
                         </ul>
+                        <p class="from-price">From USD 3,000, or from USD 1,500 to harden an existing app</p>
                     </article>
                     <article>
                         <h3>Maintenance plans</h3>
@@ -193,6 +251,7 @@
                             <li>Daily backups with tested restores</li>
                             <li>Monthly hours for small changes</li>
                         </ul>
+                        <p class="from-price">From USD 80 per month</p>
                     </article>
                 </div>
             </div>

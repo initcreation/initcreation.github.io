@@ -135,6 +135,7 @@ p { max-width: 68ch; }
 .tier p { color: var(--muted); margin-bottom: 18px; }
 .tier .price { font-size: 2rem; font-weight: 600; line-height: 1.2; color: var(--text); margin: 6px 0 2px; }
 .tier .meta { color: var(--faint); font-size: 0.92rem; }
+.from-price { margin-top: 16px; font-weight: 600; color: var(--text); }
 
 /* Split */
 .split { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; }
