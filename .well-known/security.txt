@@ -1,0 +1,4 @@
+Contact: mailto:mail@initcreation.com.np
+Expires: 2027-11-10T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://initcreation.com.np/.well-known/security.txt
