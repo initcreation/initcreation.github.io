@@ -235,6 +235,19 @@
                             <li>Email authentication records</li>
                             <li>A short walkthrough of the results</li>
                         </ul>
+                        <figure class="flow" aria-label="Free snapshot: your domain name, public sources only, manual review, short report. Uses certificate logs, DNS and email records and ReconDB data. Never scans, logs in or tests anything.">
+                            <ol class="flow-steps">
+                                <li><span>Your domain name</span></li>
+                                <li><span>Public sources only</span></li>
+                                <li><span>Manual review</span></li>
+                                <li><span>Short report</span></li>
+                            </ol>
+                            <ul class="flow-branch">
+                                <li><span class="flow-tag">Uses</span> Certificate logs, DNS and email records, ReconDB data</li>
+                                <li><span class="flow-tag flow-tag-review">Never</span> Scanning, logging in or testing anything</li>
+                            </ul>
+                            <figcaption>Passive only: we look at what is already public, the same view an attacker starts with.</figcaption>
+                        </figure>
                         <a href="/?service=security-snapshot#contact" class="text-link">Request a free snapshot →</a>
                     </article>
                     <article id="website-check">
@@ -250,6 +263,16 @@
                             <li>Commonly exposed files (such as .git, backups, .env) and admin login pages</li>
                             <li>Plain-language report with prioritised fixes, and a re-check after fixes</li>
                         </ul>
+                        <figure class="flow" aria-label="Website security check: your written permission, free tools plus a manual review, a plain-language report, you fix, then we re-check.">
+                            <ol class="flow-steps">
+                                <li><span>Your written permission</span></li>
+                                <li><span>Free tools + manual review</span></li>
+                                <li><span>Plain-language report</span></li>
+                                <li><span>You fix</span></li>
+                                <li><span>We re-check</span></li>
+                            </ol>
+                            <figcaption>A basic security check of one website, not a penetration test.</figcaption>
+                        </figure>
                         <a href="/?service=cybersecurity#contact" class="text-link">Get a quote →</a>
                     </article>
                     <article id="email-domain">
@@ -262,6 +285,19 @@
                             <li>DNSSEC where your registrar supports it</li>
                             <li>Cloudflare DNS basics</li>
                         </ul>
+                        <figure class="flow" aria-label="Email and domain setup: list who sends your email, set up SPF and DKIM, DMARC in monitoring mode, then tighten the policy once reports show your real senders pass.">
+                            <ol class="flow-steps">
+                                <li><span>List who sends your email</span></li>
+                                <li><span>SPF and DKIM</span></li>
+                                <li><span>DMARC: monitor</span></li>
+                                <li><span>Tighten the policy</span></li>
+                            </ol>
+                            <ul class="flow-branch">
+                                <li><span class="flow-tag">Reports</span> Show your real senders pass <span aria-hidden="true">→</span> safe to tighten</li>
+                                <li><span class="flow-tag flow-tag-review">Result</span> Spoofed email is much harder to send in your name</li>
+                            </ul>
+                            <figcaption>We only tighten the policy after the reports show your own email still arrives.</figcaption>
+                        </figure>
                         <a href="/?service=cybersecurity#contact" class="text-link">Get a quote →</a>
                     </article>
                     <article id="hardening">
@@ -274,6 +310,15 @@
                             <li>Backups with tested restores</li>
                             <li>An update routine and uptime monitoring</li>
                         </ul>
+                        <figure class="flow" aria-label="Website hardening: HTTPS and security headers, Cloudflare and WAF, backups with tested restores, then an update routine with uptime monitoring.">
+                            <ol class="flow-steps">
+                                <li><span>HTTPS + security headers</span></li>
+                                <li><span>Cloudflare and WAF</span></li>
+                                <li><span>Backups, tested restores</span></li>
+                                <li><span>Updates + uptime monitoring</span></li>
+                            </ol>
+                            <figcaption>Each change is agreed in writing before we make it.</figcaption>
+                        </figure>
                         <a href="/?service=cybersecurity#contact" class="text-link">Get a quote →</a>
                     </article>
                     <article id="small-teams">
@@ -287,6 +332,16 @@
                             <li>Joiner and leaver (offboarding) checklist</li>
                             <li>A short staff awareness session on phishing</li>
                         </ul>
+                        <figure class="flow" aria-label="Security basics for small teams: two-factor authentication, password manager, workspace security settings, joiner and leaver checklist, short phishing session.">
+                            <ol class="flow-steps">
+                                <li><span>Two-factor authentication</span></li>
+                                <li><span>Password manager</span></li>
+                                <li><span>Workspace security settings</span></li>
+                                <li><span>Joiner and leaver checklist</span></li>
+                                <li><span>Phishing session</span></li>
+                            </ol>
+                            <figcaption>Practical habits and settings, set up together with your team.</figcaption>
+                        </figure>
                         <a href="/?service=cybersecurity#contact" class="text-link">Get a quote →</a>
                     </article>
                     <article id="monitoring">
@@ -299,6 +354,18 @@
                             <li>Alerts when something changes</li>
                             <li>A short monthly summary</li>
                         </ul>
+                        <figure class="flow" aria-label="Exposure monitoring: your domains are watched using ReconDB data and changes are reviewed by a person. Changes trigger an alert; each month you get a short summary.">
+                            <ol class="flow-steps">
+                                <li><span>Your domains</span></li>
+                                <li><span>ReconDB data</span></li>
+                                <li><span>We review changes</span></li>
+                            </ol>
+                            <ul class="flow-branch">
+                                <li><span class="flow-tag flow-tag-review">Change</span> Alert to you</li>
+                                <li><span class="flow-tag">Monthly</span> A short summary</li>
+                            </ul>
+                            <figcaption>New subdomains and hosts, and expiring certificates, are reviewed by a person before you are alerted.</figcaption>
+                        </figure>
                         <a href="/?service=cybersecurity#contact" class="text-link">Get a quote →</a>
                     </article>
                 </div>

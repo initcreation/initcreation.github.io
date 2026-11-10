@@ -136,6 +136,16 @@ p { max-width: 68ch; }
 .tier .price { font-size: 2rem; font-weight: 600; line-height: 1.2; color: var(--text); margin: 6px 0 2px; }
 .tier .meta { color: var(--faint); font-size: 0.92rem; }
 .from-price { margin-top: 16px; font-weight: 600; color: var(--text); }
+/* Small process diagram inside a card */
+.flow { margin: 20px 0 16px; padding: 16px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg); }
+.flow-steps { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 6px; margin: 0; padding: 0; }
+.flow-steps li { display: flex; align-items: center; gap: 6px; font-size: 0.86rem; }
+.flow-steps li span { padding: 3px 10px; border: 1px solid var(--border-strong); border-radius: 999px; color: var(--text); }
+.flow-steps li:not(:last-child)::after { content: "→"; color: var(--muted); }
+.flow-branch { list-style: none; margin: 12px 0 0; padding: 12px 0 0; border-top: 1px dashed var(--border-strong); display: grid; gap: 6px; font-size: 0.86rem; color: var(--text); }
+.flow-tag { display: inline-block; min-width: 46px; margin-right: 6px; padding: 1px 8px; border-radius: 999px; background: var(--bg-alt); border: 1px solid var(--border); font-size: 0.78rem; text-align: center; color: var(--muted); }
+.flow-tag-review { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.flow figcaption { margin-top: 12px; font-size: 0.82rem; color: var(--muted); }
 
 /* Split */
 .split { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; }

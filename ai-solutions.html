@@ -206,6 +206,20 @@
                             <li>Uncertain fields sent to a person for review</li>
                             <li>Accuracy measured on your own documents</li>
                         </ul>
+                        <figure class="flow" aria-label="How a document moves through the pipeline: scanned document, OCR, fine-tuned model, schema check, confidence score. High-confidence fields go to your system as structured JSON; low-confidence fields are reviewed by a person first.">
+                            <ol class="flow-steps">
+                                <li><span>Scanned document</span></li>
+                                <li><span>OCR</span></li>
+                                <li><span>Fine-tuned model</span></li>
+                                <li><span>Schema check</span></li>
+                                <li><span>Confidence score</span></li>
+                            </ol>
+                            <ul class="flow-branch">
+                                <li><span class="flow-tag">High</span> JSON to your system</li>
+                                <li><span class="flow-tag flow-tag-review">Low</span> A person reviews <span aria-hidden="true">→</span> JSON</li>
+                            </ul>
+                            <figcaption>How a document moves through the pipeline. Uncertain fields always go to a person.</figcaption>
+                        </figure>
                         <p class="small muted"><strong>First step:</strong> Pilot on your documents, 2–4 weeks</p>
                     </article>
                     <article id="computer-vision">
@@ -218,6 +232,15 @@
                             <li>Data pipelines that keep results reliable as conditions change</li>
                             <li>Runs in the cloud, on site or on device</li>
                         </ul>
+                        <figure class="flow" aria-label="Edge vision pipeline: camera or live video, optimised model, detect, track and measure, results to your system.">
+                            <ol class="flow-steps">
+                                <li><span>Camera or live video</span></li>
+                                <li><span>Optimised model</span></li>
+                                <li><span>Detect, track, measure</span></li>
+                                <li><span>Results to your system</span></li>
+                            </ol>
+                            <figcaption>The model is optimised for your hardware and runs in the cloud, on site or on the device.</figcaption>
+                        </figure>
                         <p class="small muted"><strong>First step:</strong> Proof of concept, 4–6 weeks</p>
                     </article>
                     <article id="agents">
@@ -230,6 +253,18 @@
                             <li>Checked for prompt injection, data leakage and tool misuse</li>
                             <li>Review of an AI feature you already run</li>
                         </ul>
+                        <figure class="flow" aria-label="Agent workflow: a request, the agent plans the steps, then calls a tool. Safe actions run automatically; risky actions such as payments or deletions wait for a person to approve.">
+                            <ol class="flow-steps">
+                                <li><span>Request</span></li>
+                                <li><span>Agent plans the steps</span></li>
+                                <li><span>Tool call</span></li>
+                            </ol>
+                            <ul class="flow-branch">
+                                <li><span class="flow-tag">Safe</span> Runs automatically</li>
+                                <li><span class="flow-tag flow-tag-review">Risky</span> A person approves <span aria-hidden="true">→</span> Runs</li>
+                            </ul>
+                            <figcaption>Risky actions such as payments or deletions always wait for a person. Quality and security are measured before launch.</figcaption>
+                        </figure>
                         <p class="small muted"><strong>First step:</strong> Pilot or review, 1–4 weeks</p>
                     </article>
                     <article id="robotics-simulation">
@@ -241,6 +276,15 @@
                             <li>Benchmarks of vision-language-action models for robotic grasping</li>
                             <li>Automated data generation that runs without physical hardware</li>
                         </ul>
+                        <figure class="flow" aria-label="Simulation workflow: simulated scene, synthetic images, train or test the model, results before buying hardware.">
+                            <ol class="flow-steps">
+                                <li><span>Simulated scene</span></li>
+                                <li><span>Synthetic images</span></li>
+                                <li><span>Train or test the model</span></li>
+                                <li><span>Results before hardware</span></li>
+                            </ol>
+                            <figcaption>Built in NVIDIA Isaac Sim and Isaac Lab, so you learn what works before investing in physical hardware.</figcaption>
+                        </figure>
                         <p class="small muted"><strong>First step:</strong> Feasibility study, 1–2 weeks (selected projects only)</p>
                     </article>
                 </div>
